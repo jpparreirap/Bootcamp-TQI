@@ -1,0 +1,56 @@
+package br.com.dio.collection.streamAPI;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.DoubleConsumer;
+import java.util.function.Predicate;
+import java.util.function.ToIntFunction;
+import java.util.stream.Collectors;
+
+public class ExerciciosStreamAPI {
+
+	public static void main(String[] args) {
+		List<String> numerosAleatorios = Arrays.asList("1","0","4","1","2","3","9","9","6","5");
+
+		System.out.println("Imprima todos os elementos dessa lista de String: ");
+//		numerosAleatorios.stream().forEach(s -> System.out.println(s));
+		numerosAleatorios.forEach(System.out::println);
+		
+		System.out.println("\nPegue os 5 primeiros e coloque dentro de um Set: ");
+		numerosAleatorios.stream().limit(5).collect(Collectors.toSet()).forEach(System.out::println);
+		
+		System.out.println("\nTransforme esta lista de String em uma lista de números inteiros.");
+		List<Integer> numerosAleatorios2 = numerosAleatorios.stream().map(Integer::parseInt).collect(Collectors.toList());
+		System.out.println(numerosAleatorios2);
+		
+		System.out.println("\nPegue os números pares e maiores que 2 e coloque em uma lista: ");
+		List<Integer> ListParesMaioresQue2 = numerosAleatorios.stream()
+											.map(Integer::parseInt)
+											.filter(integer -> integer % 2 == 0 && integer > 2)
+											.collect(Collectors.toList());
+		
+		System.out.println(ListParesMaioresQue2);
+		
+		System.out.println("\nMostre a média dos números: ");
+		numerosAleatorios.stream()
+						.mapToInt(s -> Integer.parseInt(s))
+						.average()
+						.ifPresent(value -> System.out.println(value));
+		
+		System.out.println("\nRemova os valores ímpares: ");
+		numerosAleatorios2.removeIf(integer -> integer % 2 != 0);
+		
+		System.out.println(numerosAleatorios2);
+		
+		System.out.println("\nIgnore os 3 primeiros elementos da lista e imprima o restante: ");
+		System.out.println("\nRetirando os números repetidos da lista, quantos números ficam? ");
+		System.out.println("\nMostre o menor valor da lista: ");
+		System.out.println("\nMostre o maior valor da lista: ");
+		System.out.println("\nPegue apenas os números ímpares e some: ");
+		System.out.println("\nMostre a lista na ordem númerica: ");
+		System.out.println("\nAgrupe os valores ímpares múltiplos de 3 e de 5: ");
+//		dica: collect(Collectors.groupingBy(new Function());
+		
+	}
+
+}

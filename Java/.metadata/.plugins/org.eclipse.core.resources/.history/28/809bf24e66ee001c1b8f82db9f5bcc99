@@ -1,0 +1,52 @@
+package one.digitalinnovation;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		List<Carro> listaCarros = new ArrayList<>();
+		
+		listaCarros.add(new Carro("Ford"));
+		listaCarros.add(new Carro("Chevrolet"));
+		listaCarros.add(new Carro("Volkswagen"));
+		
+		System.out.println(listaCarros.contains(new Carro("Ford")));
+		System.out.println(new Carro("Ford").hashCode());
+		System.out.println(new Carro("Ford1").hashCode());
+		
+		Carro carro1 = new Carro("Ford");
+		Carro carro2 = new Carro("Chevrolet");
+		
+		System.out.println(carro1.equals(carro2));
+		
+		Set<Carro> hashSetCarros = new HashSet<>();
+		
+		hashSetCarros.add(new Carro("Ford"));
+		hashSetCarros.add(new Carro("Chevrolet"));
+		hashSetCarros.add(new Carro("Fiat"));
+		hashSetCarros.add(new Carro("Peugeot"));
+		hashSetCarros.add(new Carro("Zip"));
+		hashSetCarros.add(new Carro("Alfa Romeo"));
+		
+		System.out.println(hashSetCarros);
+		
+		Set<Carro> treeSetCarros = new TreeSet<>();
+		
+		treeSetCarros.add(new Carro("Ford"));
+		treeSetCarros.add(new Carro("Chevrolet"));
+		treeSetCarros.add(new Carro("Fiat"));
+		treeSetCarros.add(new Carro("Peugeot"));
+		treeSetCarros.add(new Carro("Zip"));
+		treeSetCarros.add(new Carro("Alfa Romeo"));
+		
+		System.out.println(treeSetCarros);
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+package desafiosDeCodigo.q3;
+
+import java.util.Scanner;
+
+public class DistanciaEntreDoisPontos {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		//P1
+		
+		String valuesP1 = input.nextLine();
+		String[] p1 = valuesP1.split(" ");
+		
+		String valuesP2 = input.nextLine();
+		String[] p2 = valuesP2.split(" ");
+		
+		for (String value : p1) {			
+			System.out.println(value);
+		}
+		
+		Double distancia = 0.0;
+		
+		distancia = Math.sqrt((Double.parseDouble(p2[0]) - p1[0])^2 + (p2[1] - p1[1])^2);
+		
+
+	}
+
+}

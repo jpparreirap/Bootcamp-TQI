@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;br.com.dio.collection.set.exercicios&apos; to &apos;list/src/br.com.dio.collection.list.exercicios&apos;&#x0D;&#x0A;- Original project: &apos;set&apos;&#x0D;&#x0A;- Destination element: &apos;list/src/br.com.dio.collection.list.exercicios&apos;&#x0D;&#x0A;- Original element: &apos;set/src/br.com.dio.collection.set.exercicios&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=list/src&lt;br.com.dio.collection.list.exercicios" element1="/src&lt;br.com.dio.collection.set.exercicios" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1655438232162" version="1.0"/>
+</session>

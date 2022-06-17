@@ -1,0 +1,10 @@
+package desafiosDeCodigo.q1;
+
+public class ProibidoEntradaDeMenores {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

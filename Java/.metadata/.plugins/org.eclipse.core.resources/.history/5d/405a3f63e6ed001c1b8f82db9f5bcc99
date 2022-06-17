@@ -1,0 +1,5 @@
+package desafioPratico.bancoDigital;
+
+public interface IConta {
+
+}

@@ -1,0 +1,10 @@
+package br.com.dio.collection.set.exercicios;
+
+public class CoresArcoIris {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

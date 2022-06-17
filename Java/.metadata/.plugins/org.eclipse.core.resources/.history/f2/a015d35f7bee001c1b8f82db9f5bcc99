@@ -1,0 +1,140 @@
+package one.digitalinnovation;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		List<Carro> listaCarros = new ArrayList<>();
+		
+		listaCarros.add(new Carro("Ford"));
+		listaCarros.add(new Carro("Chevrolet"));
+		listaCarros.add(new Carro("Volkswagen"));
+		
+		System.out.println(listaCarros.contains(new Carro("Ford")));
+		System.out.println(new Carro("Ford").hashCode());
+		System.out.println(new Carro("Ford1").hashCode());
+		
+		Carro carro1 = new Carro("Ford");
+		Carro carro2 = new Carro("Chevrolet");
+		
+		System.out.println(carro1.equals(carro2));
+		
+		Queue<Carro> queueCarros = new LinkedList<>();
+		
+		queueCarros.add(new Carro("Ford"));
+		queueCarros.add(new Carro("Chevrolet"));
+		queueCarros.add(new Carro("Fiat"));
+		
+		System.out.println(queueCarros);
+		System.out.println(queueCarros.add(new Carro("Peugeot")));
+		System.out.println(queueCarros);
+		
+		System.out.println(queueCarros.offer(new Carro("Renault")));
+		System.out.println(queueCarros);
+		
+		System.out.println(queueCarros.peek());
+		System.out.println(queueCarros);
+		
+		System.out.println(queueCarros.poll());
+		System.out.println(queueCarros);
+		
+		System.out.println(queueCarros.isEmpty());
+		
+		System.out.println(queueCarros.size());
+		
+//List<Carro> listCarros = new ArrayList<>();
+//		
+//		listCarros.add(new Carro("Ford"));
+//		listCarros.add(new Carro("Chevrolet"));
+//		listCarros.add(new Carro("Fiat"));
+//		listCarros.add(new Carro("Peugeot"));
+//		
+//		System.out.println(listCarros.contains(new Carro("Ford")));
+//		
+//		System.out.println(listCarros.get(2));
+//		
+//		System.out.println(listCarros.indexOf(new Carro("Fiat")));
+//		System.out.println(listCarros.indexOf(new Carro("Fiat2")));
+//		
+//		System.out.println(listCarros.remove(2));
+//		System.out.println(listCarros);
+		
+		Set<Carro> hashSetCarros = new HashSet<>();
+		
+		hashSetCarros.add(new Carro("Ford"));
+		hashSetCarros.add(new Carro("Chevrolet"));
+		hashSetCarros.add(new Carro("Fiat"));
+		hashSetCarros.add(new Carro("Peugeot"));
+		hashSetCarros.add(new Carro("Zip"));
+		hashSetCarros.add(new Carro("Alfa Romeo"));
+		
+		System.out.println(hashSetCarros);
+		
+		Set<Carro> treeSetCarros = new TreeSet<>();
+		
+		treeSetCarros.add(new Carro("Ford"));
+		treeSetCarros.add(new Carro("Chevrolet"));
+		treeSetCarros.add(new Carro("Fiat"));
+		treeSetCarros.add(new Carro("Peugeot"));
+		treeSetCarros.add(new Carro("Zip"));
+		treeSetCarros.add(new Carro("Alfa Romeo"));
+		
+		System.out.println(treeSetCarros);
+		
+	}
+
+}
+
+/*
+package one.digitalinnovation;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Map<String, String> aluno = new HashMap<>();
+		
+		aluno.put("Nome", "João");
+		aluno.put("Idade", "17");
+		aluno.put("Media", "8.5");
+		aluno.put("Turma", "3a");
+		
+		System.out.println(aluno);
+		
+		System.out.println(aluno.keySet());
+		
+		System.out.println(aluno.values());
+		
+		List<Map<String, String>> listAlunos = new ArrayList<>();
+		listAlunos.add(aluno);
+		
+		Map<String, String> aluno2 = new HashMap<>();
+		
+		aluno2.put("Nome", "Maria");
+		aluno2.put("Idade", "18");
+		aluno2.put("Media", "8.9");
+		aluno2.put("Turma", "3b");
+		
+		listAlunos.add(aluno2);
+		
+		System.out.println(listAlunos);
+		
+		System.out.println(aluno.containsKey("Nome"));
+	}
+
+}
+
+ * */

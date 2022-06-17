@@ -1,0 +1,10 @@
+package desafiosDeCodigo.q3;
+
+public class DistanciaEntreDoisPontos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

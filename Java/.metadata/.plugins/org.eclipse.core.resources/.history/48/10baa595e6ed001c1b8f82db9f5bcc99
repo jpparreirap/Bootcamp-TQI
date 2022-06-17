@@ -1,0 +1,80 @@
+package br.com.dio.collection.map.exercicios;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
+public class PopulacaoEstadosNE {
+
+	public static void main(String[] args) {
+		Map<String, Integer> estadosNE = new HashMap<>();
+		
+		estadosNE.put("PE", 9616621);
+		estadosNE.put("AL", 3351543);
+		estadosNE.put("CE", 9187103);
+		estadosNE.put("RN", 3534265);
+		
+		System.out.println(estadosNE);
+		
+		System.out.println("\nSubstitua a população do estado do RN por 3534165");
+		estadosNE.put("RN", 3534165);
+		System.out.println(estadosNE);
+		
+		System.out.println("\nConfira se o estado PB está no dicionário, caso não adicione: PB - 4039277");
+		
+		System.out.println("\nExiba a população PE");
+
+	}
+
+}
+
+class EstadosNE{
+	private String estado;
+	private int populacao;
+	
+	public EstadosNE(String estado, int populacao) {
+		super();
+		this.estado = estado;
+		this.populacao = populacao;
+	}
+	
+	public String getEstado() {
+		return estado;
+	}
+	
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	
+	public int getPopulacao() {
+		return populacao;
+	}
+	
+	public void setPopulacao(int populacao) {
+		this.populacao = populacao;
+	}
+	
+	@Override
+	public String toString() {
+		return "EstadosNE [estado=" + estado + ", populacao=" + populacao + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(estado, populacao);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		EstadosNE other = (EstadosNE) obj;
+		return Objects.equals(estado, other.estado) && populacao == other.populacao;
+	}
+	
+	
+}
